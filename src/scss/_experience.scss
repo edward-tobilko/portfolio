@@ -1,0 +1,138 @@
+.experience {
+  padding: 50px 0 50px 0;
+  &__content {
+    position: relative;
+    &-menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    &-item {
+      text-align: center;
+      display: grid;
+      gap: 15px;
+
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &-icon {
+      width: 170px;
+      height: 170px;
+    }
+    &-name {
+      font-size: $semiFontSize;
+      letter-spacing: 1px;
+      font-family: $fontSecondary;
+    }
+    &-title {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      z-index: -1;
+      font-size: 120px;
+      white-space: nowrap;
+      opacity: 0.4;
+      letter-spacing: 13px;
+      color: rgb(109, 105, 105);
+      font-family: $fontSecondary;
+    }
+  }
+}
+
+.experience-swiper__wrapper {
+  height: 300px !important;
+  cursor: pointer;
+}
+
+.experience-swiper__pagination {
+  width: 100px !important;
+  height: 20px !important;
+  span {
+    background: $textColor;
+    width: 30px;
+    border-radius: 5px;
+    height: 4px;
+  }
+}
+
+.experience__content-smallScreen {
+  display: none;
+}
+
+// Media
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  .experience__content-title {
+    font-size: 90px;
+  }
+  .experience__content-icon {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience__content-title {
+    font-size: 70px;
+  }
+  .experience__content-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .experience-swiper {
+    display: none;
+  }
+  .experience__content-smallScreen {
+    display: flex;
+    max-width: 400px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .experience__content-title {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .experience__content-item {
+    margin: 20px;
+  }
+  .experience__content-title {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .experience__content-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .experience {
+    scroll-margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .experience__content-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .experience__content-title {
+    top: -50px;
+  }
+  .experience__content-item {
+    margin: 20px;
+  }
+}

@@ -1,0 +1,181 @@
+.contact {
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-title {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: -1;
+
+      font-size: 135px;
+      white-space: nowrap;
+      opacity: 0.4;
+      letter-spacing: 13px;
+      color: rgb(109, 105, 105);
+      font-family: $fontSecondary;
+    }
+    &-mail {
+      font-size: $normalFontSize;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      i {
+        font-size: $semiFontSize;
+        padding-right: 10px;
+        color: $textColor;
+      }
+      span {
+        color: $textColor;
+      }
+    }
+    &-phone {
+      font-size: $normalFontSize;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      i {
+        font-size: $semiFontSize;
+        padding-right: 10px;
+        color: $textColor;
+      }
+    }
+    &-cv {
+      background: $textColor;
+      margin-top: 50px;
+      padding: 10px 30px;
+      width: 100px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .cv {
+      font-size: $normalFontSize;
+      color: $whiteColor;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+    &-form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      &-input {
+        border: 0;
+        outline: none;
+        background: #262626;
+        margin: 10px 0;
+        color: $greyColor;
+        padding: 15px 0 15px 15px;
+        font-size: $normalFontSize;
+        border-radius: 6px;
+      }
+    }
+    &-btn {
+      background: $textColor;
+      margin: 50px 0;
+      padding: 10px 30px;
+      width: 150px;
+      text-align: center;
+      border-radius: 5px;
+      outline: none;
+      border: 0;
+      font-size: $normalFontSize;
+      color: $whiteColor;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// Scroll Masic
+.contact__container-phone,
+.contact__container-mail {
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+}
+.contact__container-mail.visible {
+  opacity: 1;
+}
+.contact__container-phone.visible {
+  opacity: 1;
+}
+
+// Media
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  .contact__container-title {
+    font-size: 100px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__container-title {
+    font-size: 80px;
+  }
+  .contact__container {
+    flex-direction: column-reverse;
+  }
+  .contact__container-title {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .contact__container-form {
+    margin-top: 120px;
+    width: 100%;
+  }
+  .contact__container-btn {
+    width: 100%;
+  }
+  .contact__container-cv {
+    width: 210px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact__container-title {
+    font-size: 60px;
+  }
+  .contact__container-form {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+}
+
+@media screen and (max-width: 320px) {
+  .contact__container-title {
+    font-size: 50px;
+  }
+  .contact__container-form {
+    margin-top: 60px;
+  }
+  .contact__container-mail {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .contact__container-phone {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .contact__container-cv {
+    margin: 20px 0;
+  }
+  .contact__container .cv {
+    font-size: 15px;
+  }
+  .contact__container-btn {
+    margin: 30px 0;
+    font-size: 15px;
+  }
+}

@@ -46,11 +46,16 @@
     }
     &-cv {
       background: $textColor;
-      margin-top: 50px;
+      margin-top: 30px;
       padding: 10px 30px;
-      width: 100px;
-      text-align: center;
       border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: 22px;
+        margin-left: 7px;
+      }
     }
     .cv {
       font-size: $normalFontSize;
@@ -74,6 +79,9 @@
       }
     }
     &-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: $textColor;
       margin: 50px 0;
       padding: 10px 30px;
@@ -85,6 +93,10 @@
       font-size: $normalFontSize;
       color: $whiteColor;
       letter-spacing: 1px;
+      i {
+        font-size: 22px;
+        margin-left: 7px;
+      }
     }
   }
 }

@@ -85,7 +85,9 @@ body {
 .scrollUp {
   position: fixed;
   bottom: -30%;
-  right: 35px;
+  right: 90px;
+  z-index: 1000;
+
   background-color: hsla(0, 0%, 100%, 0.1);
   backdrop-filter: blur(16px);
   display: inline-flex;

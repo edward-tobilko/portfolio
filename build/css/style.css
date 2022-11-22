@@ -343,6 +343,19 @@ textarea {
           transform-style: preserve-3d;
 }
 
+.home header .header__wrapper-background {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: -1;
+  font-size: 230px;
+  white-space: nowrap;
+  opacity: 0.2;
+  letter-spacing: 13px;
+  color: #6d6969;
+  font-family: "Redressed", cursive;
+}
+
 .home header .header__wrapper .header__about {
   width: 100%;
   display: -webkit-inline-box;
@@ -400,29 +413,14 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.home header .header__wrapper .header__content-background {
-  position: absolute;
-  top: 15%;
-  left: 0;
-  z-index: -1;
-  font-size: 320px;
-  white-space: nowrap;
-  opacity: 0.2;
-  letter-spacing: 13px;
-  color: #6d6969;
-  font-family: "Redressed", cursive;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home header .header__wrapper .header__content-left {
@@ -453,6 +451,10 @@ textarea {
   line-height: 45px;
 }
 
+.home header .header__wrapper .header__content-left-about br {
+  display: none;
+}
+
 .home header .header__wrapper .header__content-left-text {
   font-size: 14px;
   letter-spacing: 2px;
@@ -480,20 +482,10 @@ textarea {
   color: #4af6cd;
 }
 
-.home header .header__wrapper .header__content-right {
-  max-width: 60%;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
 .home header .header__wrapper .header__content-right-avatar {
-  position: absolute;
-  bottom: -30px;
-  right: 80px;
-  z-index: -2;
-  width: 600px;
-  opacity: 0.5;
+  max-width: 450px;
+  width: 100%;
+  opacity: 0.3;
 }
 
 .header__nav {
@@ -1909,7 +1901,8 @@ body.locked {
 .scrollUp {
   position: fixed;
   bottom: -30%;
-  right: 35px;
+  right: 90px;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
@@ -1945,12 +1938,8 @@ body.locked {
 }
 
 @media screen and (max-width: 1440px) {
-  .home header .header__wrapper .header__content-background {
-    font-size: 280px;
-  }
-
   .home header .header__wrapper .header__content-left {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   .about .about__container-left {
@@ -1959,12 +1948,13 @@ body.locked {
 }
 
 @media screen and (max-width: 1200px) {
-  .home header .header__wrapper .header__content-background {
-    font-size: 210px;
+  .home header .header__wrapper-background {
+    font-size: 180px;
   }
 
-  .home header .header__wrapper .header__content-right-avatar {
-    width: 650px;
+  .home header .header__wrapper .header__content-left-about {
+    letter-spacing: 0;
+    font-size: 22px;
   }
 
   .works-title {
@@ -1977,6 +1967,23 @@ body.locked {
 }
 
 @media screen and (max-width: 992px) {
+  .home header .header__wrapper-background {
+    font-size: 120px;
+  }
+
+  .home header .header__wrapper .header__content-right-avatar {
+    max-width: 350px;
+  }
+
+  .home header .header__wrapper .header__content-left-about {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .home header .header__wrapper .header__content-left-about br {
+    display: block;
+  }
+
   .about .about__container-left-title {
     top: -150px;
     right: -80px;
@@ -2007,19 +2014,27 @@ body.locked {
 }
 
 @media screen and (max-width: 768px) {
-  .home header .header__wrapper .header__content-right-avatar {
-    width: 550px;
-    right: 0;
-    bottom: 70px;
+  .home header .header__wrapper .header__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 
-  .home header .header__wrapper .header__content-background {
-    font-size: 150px;
+  .home header .header__wrapper-background {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 10%;
   }
 
-  .home header .header__wrapper .header__content-right {
-    width: 0;
-    max-width: 0;
+  .home header .header__wrapper .header__content-left {
+    margin-left: 0;
+  }
+
+  .home header .header__wrapper .header__content {
+    padding-top: 100px;
   }
 
   .header__menu {
@@ -2223,32 +2238,13 @@ body.locked {
 }
 
 @media screen and (max-width: 576px) {
-  .home header .header__wrapper .header__content-background {
+  .home header .header__wrapper-background {
     font-size: 70px;
-  }
-
-  .home header .header__wrapper {
-    position: relative;
-  }
-
-  .home header .header__wrapper .header__content-left {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    margin-left: 0;
-    width: 100%;
+    top: 15%;
   }
 
   .home header .header__wrapper .header__content-right-avatar {
-    width: 450px;
-    bottom: 150px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    max-width: 290px;
   }
 
   .home header .header__wrapper .header__about-job__title {
@@ -2338,8 +2334,19 @@ body.locked {
 
 @media screen and (max-width: 420px) {
   .home header .header__wrapper .header__content-right-avatar {
-    width: 350px;
-    bottom: 80px;
+    max-width: 250px;
+  }
+
+  .home header .header__wrapper-background {
+    font-size: 45px;
+  }
+
+  .home header .header__wrapper .header__content-left-about {
+    font-size: 17px;
+  }
+
+  .home header .header__wrapper .header__content {
+    padding-top: 50px;
   }
 
   .about .about__container-left-title {
@@ -2383,16 +2390,8 @@ body.locked {
 }
 
 @media screen and (max-width: 320px) {
-  .home header .header__wrapper .header__content-right-avatar {
-    width: 250px;
-  }
-
-  .home header .header__wrapper .header__content-left {
-    bottom: 0;
-  }
-
   .home header .header__wrapper .header__about-job__title {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .home header .header__wrapper .header__about-job__name {
@@ -2404,8 +2403,8 @@ body.locked {
     font-size: 17px;
   }
 
-  .home header .header__wrapper .header__content-background {
-    font-size: 45px;
+  .home header .header__wrapper .header__content {
+    padding-top: 0;
   }
 
   .about .about__container-left-title {

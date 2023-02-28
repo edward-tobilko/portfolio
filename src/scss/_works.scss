@@ -123,6 +123,10 @@
 }
 
 @media screen and (max-width: 576px) {
+  .works {
+    margin-bottom: 0;
+    padding-top: 60px;
+  }
   .works .work .work__wrapper-img {
     width: 330px;
   }

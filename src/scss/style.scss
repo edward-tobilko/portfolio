@@ -119,4 +119,17 @@ body {
   .social-link {
     font-size: 20px;
   }
+  .scrollUp {
+    right: 50px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .scrollUp {
+    right: 30px;
+    bottom: 20px;
+  }
 }

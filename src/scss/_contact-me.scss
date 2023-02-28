@@ -115,12 +115,6 @@
 }
 
 // Media
-@media screen and (max-width: 1440px) {
-}
-
-@media screen and (max-width: 1200px) {
-}
-
 @media screen and (max-width: 992px) {
   .contact__container-title {
     font-size: 100px;
@@ -162,12 +156,10 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-}
-
 @media screen and (max-width: 320px) {
   .contact__container-title {
-    font-size: 50px;
+    font-size: 40px;
+    max-width: 320px;
   }
   .contact__container-form {
     margin-top: 60px;

@@ -679,6 +679,7 @@ textarea {
   text-align: center;
   display: grid;
   gap: 15px;
+  text-decoration: none;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
@@ -692,6 +693,10 @@ textarea {
           transform: scale(1.2);
 }
 
+.experience__content-item a {
+  text-decoration: none;
+}
+
 .experience__content-icon {
   width: 170px;
   height: 170px;
@@ -701,6 +706,7 @@ textarea {
   font-size: 24px;
   letter-spacing: 1px;
   font-family: "Redressed", cursive;
+  color: #ffffff;
 }
 
 .experience__content-title {

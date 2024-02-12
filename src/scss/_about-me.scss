@@ -4,10 +4,12 @@
   display: flex;
   align-items: center;
   position: relative;
+
   .about__container {
     &-left {
       position: relative;
       max-width: 45%;
+
       &-title {
         position: absolute;
         top: -50px;
@@ -20,18 +22,21 @@
         color: rgb(109, 105, 105);
         font-family: $fontSecondary;
       }
+
       &-subtitle {
         font-size: $normalFontSize;
         letter-spacing: 1.5px;
         line-height: 30px;
       }
     }
+
     &-right {
       text-align: center;
 
       position: absolute;
       top: 20px;
       right: 100px;
+
       .path-lamp {
         filter: drop-shadow(30px 30px 5px #fff);
         height: 681px;

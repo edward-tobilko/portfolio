@@ -1,7 +1,6 @@
 // Global SCSS-files imports
 @import "./vars";
 @import "./reset";
-@import "./@media";
 
 // Sections or Pages SCSS-files imports
 @import "./home";
@@ -26,6 +25,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
   &.locked {
     overflow: hidden;
   }
@@ -49,6 +49,7 @@ body {
   height: 100%;
   text-align: center;
   overflow: hidden;
+
   svg {
     display: inline-block;
     height: 100%;
@@ -67,14 +68,17 @@ body {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   gap: 25px;
+
   &-link {
     font-size: 25px;
     cursor: pointer;
     text-decoration: none;
     color: white;
   }
+
   &-item {
     transition: box-shadow 0.2s linear;
+
     &:hover {
       filter: drop-shadow(0 0 7px $textColor);
     }

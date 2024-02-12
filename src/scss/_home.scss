@@ -1,14 +1,17 @@
 .home {
   min-height: 100vh;
   height: 100%;
+
   header {
     height: calc(100vh - 70px);
     perspective: 600px;
     perspective-origin: center bottom;
+
     .header__wrapper {
       height: 100%;
       transform-origin: 50% 90%;
       transform-style: preserve-3d;
+
       &-background {
         position: absolute;
         top: 15%;
@@ -21,34 +24,41 @@
         color: rgb(109, 105, 105);
         font-family: $fontSecondary;
       }
+
       .header__about {
         width: 100%;
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
         height: 100px;
+
         &-job__title {
           font-size: $bigFontSize;
           letter-spacing: 1.5px;
           color: $whiteColor;
+
           span {
             color: $textColor;
           }
         }
+
         &-job__name {
           font-size: $smallFontSize;
           letter-spacing: 2px;
           line-height: 20px;
         }
+
         &-fullname__name {
           font-size: $bigFontSize;
           font-family: $fontSecondary;
           letter-spacing: 1px;
         }
+
         &-fullname__surname {
           position: relative;
           color: $textColor;
           letter-spacing: 1px;
+
           &::after {
             content: "";
             width: 13px;
@@ -69,9 +79,11 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+
         &-left {
           position: relative;
           padding: 20px;
+
           &::before {
             content: "";
             width: 23px;
@@ -83,30 +95,37 @@
             bottom: 0px;
             left: 0;
           }
+
           &-title {
             font-size: $smallFontSize;
             letter-spacing: 2px;
             line-height: 20px;
           }
+
           &-about {
             font-size: $semiFontSize;
             letter-spacing: 1px;
             line-height: 45px;
+
             br {
               display: none;
             }
           }
+
           &-text {
             font-size: $smallFontSize;
             letter-spacing: 2px;
           }
+
           &-view {
             display: flex;
             align-items: center;
           }
+
           &-btn {
             position: relative;
             padding-left: 30px;
+
             i {
               position: absolute;
               top: 0;
@@ -117,10 +136,12 @@
             }
           }
         }
+
         &-right {
           background-color: $textColor;
           opacity: 0.7;
           border-radius: 50%;
+
           &-avatar {
             max-width: 450px;
             width: 100%;
@@ -139,12 +160,15 @@
   align-items: center;
   background: $contentColor;
   height: 70px;
+
   .header__item {
     display: inline-block;
     transition: transform 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.2);
     }
+
     .header__link {
       font-size: $smallFontSize;
       letter-spacing: 2px;
@@ -153,6 +177,7 @@
       text-decoration: none;
       color: $whiteColor;
       padding: 0 15px;
+
       &:focus {
         outline: none;
       }

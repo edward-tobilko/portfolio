@@ -1,9 +1,11 @@
 .contact {
   position: relative;
+
   &__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     &-content {
       &__title {
         position: absolute;
@@ -19,6 +21,7 @@
         font-family: $fontSecondary;
       }
     }
+
     &-content {
       &__mail {
         font-size: $normalFontSize;
@@ -26,16 +29,19 @@
         display: flex;
         align-items: center;
         margin: 20px 0;
+
         i {
           font-size: $semiFontSize;
           padding-right: 10px;
           color: $textColor;
         }
+
         span {
           color: $textColor;
         }
       }
     }
+
     &-content {
       &__phone {
         font-size: $normalFontSize;
@@ -43,6 +49,7 @@
         display: flex;
         align-items: center;
         margin: 20px 0;
+
         i {
           font-size: $semiFontSize;
           padding-right: 10px;
@@ -50,6 +57,7 @@
         }
       }
     }
+
     &-content {
       &__cv {
         background: $textColor;
@@ -59,22 +67,26 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
         i {
           font-size: 22px;
           margin-left: 7px;
         }
       }
     }
+
     .cv {
       font-size: $normalFontSize;
       color: $whiteColor;
       text-decoration: none;
       letter-spacing: 2px;
     }
+
     &-form {
       width: 50%;
       display: flex;
       flex-direction: column;
+
       &-input {
         border: 0;
         outline: none;
@@ -86,6 +98,7 @@
         border-radius: 6px;
       }
     }
+
     &-btn {
       display: inline-flex;
       align-items: center;
@@ -101,6 +114,7 @@
       font-size: $normalFontSize;
       color: $whiteColor;
       letter-spacing: 1px;
+
       i {
         font-size: 22px;
         margin-left: 7px;

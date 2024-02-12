@@ -49,11 +49,17 @@
         display: flex;
         align-items: center;
         margin: 20px 0;
+        line-height: 25px;
 
         i {
           font-size: $semiFontSize;
           padding-right: 10px;
           color: $textColor;
+        }
+
+        &-numbers {
+          display: flex;
+          flex-direction: column;
         }
       }
     }
@@ -147,6 +153,9 @@
 @media screen and (max-width: 768px) {
   .contact__container-content__title {
     font-size: 80px;
+  }
+  .contact__container-content {
+    text-align: center;
   }
   .contact__container {
     flex-direction: column-reverse;

@@ -62,16 +62,13 @@
 .experience-swiper__pagination {
   width: 100px !important;
   height: 20px !important;
+
   span {
     background: $textColor;
     width: 30px;
     border-radius: 5px;
     height: 4px;
   }
-}
-
-.experience__content-smallScreen {
-  display: none;
 }
 
 // Media
@@ -99,17 +96,6 @@
   .experience {
     padding: 0 0 50px 0;
   }
-  .experience-swiper {
-    display: none;
-  }
-  .experience__content-smallScreen {
-    display: flex;
-    max-width: 400px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-  }
   .experience__content-title {
     top: -50px;
     left: 50%;
@@ -122,6 +108,22 @@
     font-size: 50px;
     letter-spacing: 5px;
   }
+  .swiper-pagination {
+    display: none;
+  }
+  .experience-swiper {
+    overflow: visible;
+  }
+  .experience-swiper__wrapper {
+    flex-direction: column;
+    height: 650px !important;
+  }
+  .experience__content-menu {
+    display: block;
+  }
+  .experience__content-name {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -132,17 +134,16 @@
   .experience {
     scroll-margin-top: 150px;
   }
+  .swiper-wrapper {
+    height: 520px !important;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  .experience__content-icon {
-    width: 100px;
-    height: 100px;
+  .swiper-wrapper {
+    height: 420px !important;
   }
   .experience__content-title {
     top: -50px;
-  }
-  .experience__content-item {
-    margin: 20px;
   }
 }
